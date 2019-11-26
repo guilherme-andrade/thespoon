@@ -13,7 +13,8 @@ restaurants.each do |r|
 		name: "#{Faker::Movies::LordOfTheRings.character}'s kitchen",
 		address: "#{location}, Middle Earth",
     image_url: "https://source.unsplash.com/1600x900/?#{location}"
-	)
+  )
+
   puts "Created Restaurant: #{restaurant.name}"
 
   rand(3..10).times do
