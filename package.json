@@ -15,7 +15,6 @@
     "tether": "^1.4.7"
   },
   "devDependencies": {
-    "@fortawesome/fontawesome-free": "^5.11.2",
     "webpack-dev-server": "^3.9.0"
   }
 }

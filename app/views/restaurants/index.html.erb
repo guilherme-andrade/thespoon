@@ -7,9 +7,11 @@
       <div class="card h-100">
         <%= image_tag restaurant.image_url, class: 'card-img-top', height: 200 %>
         <div class="card-body">
-          <% restaurant.rating.times do %>
-            <i class="fas fa-star text-warning float-right"></i>
-          <% end %>
+          <span class="float-right">
+            <% restaurant.rating.times do %>
+              ⭐️
+            <% end %>
+          </span>
 
           <h5 class="card-title">
             <%= restaurant.name %>

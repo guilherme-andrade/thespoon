@@ -4,9 +4,11 @@
 
 <h1>
   <%= @restaurant.name %>
-  <% @restaurant.rating.times do %>
-    <i class="fas fa-star fa-xs text-warning"></i>
-  <% end %>
+  <span class="float-right">
+    <% @restaurant.rating.times do %>
+      ⭐️
+    <% end %>
+  </span>
 </h1>
 
 
