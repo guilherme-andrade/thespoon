@@ -1,0 +1,29 @@
+<%= link_to 'New Restaurant', new_restaurant_path, class: 'btn btn-primary float-right' %>
+<h1>What restaurants has it got in its nasty little pocketses?</h1>
+<hr>
+<div class="row">
+  <% @restaurants.each do |restaurant| %>
+    <div class="col-lg-4 col-md-6 col-xs-12 mb-4">
+      <div class="card h-100">
+        <%= image_tag restaurant.image_url, class: 'card-img-top', height: 200 %>
+        <div class="card-body">
+          <% restaurant.rating.times do %>
+            <i class="fas fa-star text-warning float-right"></i>
+          <% end %>
+
+          <h5 class="card-title">
+            <%= restaurant.name %>
+          </h5>
+
+          <p class="card-text">
+            <%= restaurant.address %>
+          </p>
+          <%= link_to 'Show', restaurant, class: 'btn btn-primary' %>
+          <%= link_to 'Edit', edit_restaurant_path(restaurant), class: 'btn btn-warning' %>
+          <%= link_to 'Destroy', restaurant, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
+

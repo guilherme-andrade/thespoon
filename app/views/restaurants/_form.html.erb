@@ -1,0 +1,15 @@
+
+<%= simple_form_for(@restaurant, wrapper: :horizontal_form) do |f| %>
+  <%= f.error_notification %>
+  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+  <div class="form-inputs">
+    <%= f.input :name %>
+    <%= f.input :address %>
+  </div>
+
+  <div class="form-actions float-right">
+    <%= link_to 'Cancel', restaurants_path, class: 'btn btn-light' %>
+    <%= f.button :submit, class: 'btn btn-primary' %>
+  </div>
+<% end %>

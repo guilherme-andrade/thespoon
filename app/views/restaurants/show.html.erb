@@ -1,0 +1,36 @@
+<%= image_tag @restaurant.image_url, class: 'w-100 mb-3', height: 350 %>
+
+<%= link_to 'Edit', edit_restaurant_path(@restaurant), class: 'btn btn-warning float-right' %>
+
+<h1>
+  <%= @restaurant.name %>
+  <% @restaurant.rating.times do %>
+    <i class="fas fa-star fa-xs text-warning"></i>
+  <% end %>
+</h1>
+
+
+<h5>
+  <%= @restaurant.address %>
+</h5>
+
+
+<br><br>
+<%= link_to 'Add Review', new_restaurant_review_path(@restaurant), class: 'btn btn-primary float-right' %>
+<h2>Reviews:</h2>
+<hr>
+
+<% @restaurant.reviews.each do |review| %>
+  <div class="row pt-3">
+    <div class="col-10">
+      <p class="mb-1 font-weight-light"><%= review.content %></p>
+      <p class="text-muted small"><%= time_ago_in_words review.created_at %> ago</p>
+    </div>
+    <div class="col-2">
+      <% review.rating.times do %>
+        <i class="fas fa-star text-warning"></i>
+      <% end %>
+    </div>
+  </div>
+  <hr>
+<% end %>
