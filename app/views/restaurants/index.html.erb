@@ -1,4 +1,4 @@
-<%= link_to 'New Restaurant', new_restaurant_path, class: 'btn btn-primary float-right' %>
+<%= link_to 'New Restaurant', new_restaurant_path, class: 'btn btn-success float-right' %>
 <h1>What restaurants has it got in its nasty little pocketses?</h1>
 <hr>
 <div class="row">
@@ -20,7 +20,7 @@
           <p class="card-text">
             <%= restaurant.address %>
           </p>
-          <%= link_to 'Show', restaurant, class: 'btn btn-primary' %>
+          <%= link_to 'Show', restaurant, class: 'btn btn-dark' %>
           <%= link_to 'Edit', edit_restaurant_path(restaurant), class: 'btn btn-warning' %>
           <%= link_to 'Destroy', restaurant, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
         </div>

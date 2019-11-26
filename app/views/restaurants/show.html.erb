@@ -4,11 +4,9 @@
 
 <h1>
   <%= @restaurant.name %>
-  <span class="float-right">
-    <% @restaurant.rating.times do %>
-      ⭐️
-    <% end %>
-  </span>
+  <% @restaurant.rating.times do %>
+    ⭐️
+  <% end %>
 </h1>
 
 
@@ -18,7 +16,7 @@
 
 
 <br><br>
-<%= link_to 'Add Review', new_restaurant_review_path(@restaurant), class: 'btn btn-primary float-right' %>
+<%= link_to 'Add Review', new_restaurant_review_path(@restaurant), class: 'btn btn-success float-right' %>
 <h2>Reviews:</h2>
 <hr>
 
@@ -30,7 +28,7 @@
     </div>
     <div class="col-2">
       <% review.rating.times do %>
-        <i class="fas fa-star text-warning"></i>
+        ⭐️
       <% end %>
     </div>
   </div>
